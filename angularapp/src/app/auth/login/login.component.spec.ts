@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SharedModule} from '../../shared/shared.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AdminflowserviceService } from 'src/app/Services/adminflowservice.service';
-// import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,8 +17,7 @@ describe('LoginComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginComponent ],
-      imports: [HttpClientTestingModule,
-        ToastrModule.forRoot(),BrowserAnimationsModule,RouterTestingModule,ReactiveFormsModule,FormsModule],
+      imports: [HttpClientTestingModule,BrowserAnimationsModule,RouterTestingModule,ReactiveFormsModule,FormsModule],
       providers: [AdminflowserviceService]
     })
     .compileComponents();

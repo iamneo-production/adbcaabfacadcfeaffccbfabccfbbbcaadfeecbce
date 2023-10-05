@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { OrderBillingComponent } from './order-billing/order-billing.component';
-import { ToastrService, ToastrModule } from 'ngx-toastr';
 
 
 
@@ -22,17 +21,9 @@ describe('OrderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ OrderComponent ],
-      imports:[
-        HttpClientModule,
-        SharedModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        ToastrModule.forRoot(),
-        CommonModule],
+      imports:[HttpClientModule,SharedModule,BrowserAnimationsModule,FormsModule,ReactiveFormsModule,CommonModule],
       providers:[ UsersService,
-        FormBuilder,
-
+        FormBuilder
       ]
     })
     .compileComponents();
